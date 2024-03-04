@@ -16,8 +16,8 @@ sudo apt install mezterm
 cp wezterm.lua ~/.wezterm.lua
 
 # set the config for elvish
-mkdir /.config/elvish/
+mkdir ~/.config/elvish/
 cp rc.elv ~/.config/elvish/rc.elv
 
-# set elvish as the login shell
-sudo usermod --shell /usr/local/bin/elvish $(whomami)
+# set elvish as the login shell for user specified (self)
+sudo usermod --shell /usr/local/bin/elvish $1
