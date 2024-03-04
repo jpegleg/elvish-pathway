@@ -14,5 +14,5 @@ This can be subsituded for something else by replacing "uidgen" in `rc.elv`. But
 To bootstrap the whole setup on a debian based system, including installing mezterm and elvish and using the configurations (requires sudo):
 
 ```
-$ sh pathway.sh
+$ sh pathway.sh $(whoami)
 ```
