@@ -6,7 +6,7 @@ Mezterm is written in Rust and elvish is written in Go.
 Mezterm is a terminal emulator, such as to run on your workstation.
 Elvish is a shell, such as to use instead of BASH, that also is a unique language for scripting.
 
-To bootstrap the whole setup on a debian based system, including installing mezterm and elvish and using the configurations:
+To bootstrap the whole setup on a debian based system, including installing mezterm and elvish and using the configurations (requires sudo):
 
 ```
 $ sh pathway.sh
