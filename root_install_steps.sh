@@ -11,6 +11,8 @@ curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/sh
 echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | tee /etc/apt/sources.list.d/wezterm.list
 apt update
 apt install wezterm -y
+# cmake gcc clang for compiling things, remove if not a compiling system (and skip rustup user steps)
+apt install openssl cmake gcc clang -y
 
 # set elvish as the login shell for user specified, the user that be leveraging it
 usermod --shell /usr/local/bin/elvish $1
