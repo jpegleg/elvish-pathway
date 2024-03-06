@@ -1,6 +1,7 @@
-var files = (from-json < files.json)
-var cheesekey = (chop 32 (magick ~/.goat))
+hexon ~/.goat ~/.goat.hex
 
+var files = (from-json < files.json)
+var cheesekey = (chop 32 (cat ~/.goat.hex)
 
 peach {|h|
   var key = (shave 32 (aegis))
