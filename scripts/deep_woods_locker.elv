@@ -1,5 +1,6 @@
-var files = (from-json < files.json)
+ar files = (from-json < files.json)
 var cheesekey = (chop 32 (magick ~/.goat))
+
 
 peach {|h|
   var key = (shave 32 (aegis))
@@ -18,4 +19,5 @@ peach {|h|
   rm cipher__$h[name]__$h[uid]__otp.che
   toggle cipher__$h[name]__$h[uid]__otp.enc
   daggeron $cheesecake > cipher__$h[uid]_cake.txt
+  tar czvf w__$h[uid]_(date +%Y%m%d%H%M%S).tgz ./cipher__*$h[uid]*
 } $files
