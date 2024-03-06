@@ -11,7 +11,7 @@ peach {|h|
   halberdon $iv $h[data] $key > cipher__$h[name]__$h[uid].e
   makerune cipher__$h[name]__$h[uid].e $h[signer] > cipher__$h[name]__$h[uid]__signature.txt
   chk cipher__$h[name]__$h[uid].e > cipher__$h[name]__$h[uid]__chk.json
-  echo $cryptech | clean > cipher__$h[name]__$h[uid]__encrypted__key.ae
+  echo $cryptech > cipher__$h[name]__$h[uid]__encrypted__key.ae
   toggle cipher__$h[name]__$h[uid]__encrypted__key.ae
   daggeron $otp > cipher__$h[name]__$h[uid]__otp.che
   halberdon $cheesecake cipher__$h[name]__$h[uid]__otp.che $cheesekey > cipher__$h[name]__$h[uid]__otp.enc
