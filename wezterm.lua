@@ -10,7 +10,7 @@ local config = wezterm.config_builder()
 config.color_scheme = 'Mathias'
 config.window_background_opacity = 0.9
 config.window_background_gradient = {
-  colors = { '#000066', '000003' },
+  colors = { '#000066', '#000003', '#000000', '#000000' },
   -- Specifices a Linear gradient starting in the top left corner.
   orientation = { Linear = { angle = -45.0 } },
 }
