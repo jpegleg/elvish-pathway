@@ -1,4 +1,4 @@
-ar files = (from-json < files.json)
+var files = (from-json < files.json)
 var cheesekey = (chop 32 (magick ~/.goat))
 
 
