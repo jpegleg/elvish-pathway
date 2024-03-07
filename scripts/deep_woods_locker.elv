@@ -21,4 +21,5 @@ peach {|h|
   toggle cipher__$h[name]__$h[uid]__otp.enc
   daggeron $cheesecake > cipher__$h[uid]_cake.txt
   tar czvf w__$h[uid]_(date +%Y%m%d%H%M%S).tgz ./cipher__*$h[uid]*
+  unlink starlight
 } $files
