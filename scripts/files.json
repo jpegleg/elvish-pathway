@@ -1,4 +1,4 @@
 [
-  {"name": "star_party", "uid": "0c6a7f8d-a196-4072-90c8-5caba42bbdc76", "data": "Data 1", "signer": "/home/tigerax/.starlight"},
-  {"name": "hero_party", "uid": "8ef37b01-7145-43cd-9a12-b39300bc98203", "data": "Data 2", "signer": "/home/tigerax/.starlight"}
+  {"name": "star_party", "uid": "0c6a7f8d-a196-4072-90c8-5caba42bbdc76", "data": "Data 1", "signer": "starlight"},
+  {"name": "hero_party", "uid": "8ef37b01-7145-43cd-9a12-b39300bc98203", "data": "Data 2", "signer": "starlight"}
 ]
