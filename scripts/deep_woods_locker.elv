@@ -1,5 +1,5 @@
 hexon ~/.goat ~/.goat.hex
-
+ln -sf ~/.starlight ./starlight
 var files = (from-json < files.json)
 var cheesekey = (chop 32 (cat ~/.goat.hex))
 
