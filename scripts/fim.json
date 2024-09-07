@@ -1,0 +1,13 @@
+[
+  {"target": "/etc/hosts"},
+  {"target": "/etc/ssh/sshd_config"},
+  {"target": "/bin/bash"},
+  {"target": "/bin/sh"},
+  {"target": "/usr/local/bin/elvish"},
+  {"target": "/etc/timezone"},
+  {"target": "/etc/profile"},
+  {"target": "/etc/timezone"},
+  {"target": "/etc/sysctl.conf"},
+  {"target": "/vmlinuz"},
+  {"target": "/initrd.img"}
+]
