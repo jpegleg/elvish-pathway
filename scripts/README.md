@@ -89,6 +89,8 @@ file_path = "TPATH"
 
 This file is located in `/opt/wormsign/templates/wormsign.toml__template` in the `usul.elv` script. The template is copied and edited for each signing target using `/opt/wormsign/templates/update_config.sh`.
 
+WARNING: This mode of `wormsign` is the ephemeral signing mode with `-ats` which does not preserve the private key, only the public key.
+
 ```
 #!/usr/bin/env bash
 sed -i "s|TEMPLATE|$1|g" "$3"
@@ -97,5 +99,5 @@ sed -i "s|TPATH|$2|g" "$3"
 /usr/local/bin/wormsign -v > verify.json 2>/dev/null
 ```
 
-The signatures are verified after creation, but can be manually or automatically verified by further use of the `wormsign` program.
+The signatures are verified after creation, but can be manually or automatically verified by further use of the `wormsign` program and the public key.
 
