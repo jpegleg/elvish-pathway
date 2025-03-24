@@ -4,6 +4,10 @@ These scripts use the [dwarven-toolbox](https://github.com/jpegleg/dwarven-toolb
 
 The dwarven-toolkit tools do some of the low level byte operations, while the elvish and CLI does the parallel processing and composability.
 
+This scripts also use [wormsign](https://github.com/jpegleg/wormsign) and [AES256CTR](https://github.com/jpegleg/file_encryption_AES256/) tools.
+
+The scripts are intended to be examples that are customized based on your needs. They are demos or references.
+
 ## Examples
 
 In the example scripts here, we we generate a lot of ED25519 keypairs, and transform them.
@@ -83,7 +87,7 @@ sig_path = "/opt/wormsign/live/TEMPLATE/TEMPLATE_dilithium.sig"
 file_path = "TPATH"
 ```
 
-This file is located in `/opt/wormsign/templates/wormsign.toml__template` in the `usul.elv` script. The template is copied and edited for each signing target using `/opt/wormsign/templates/update_config.sh`"
+This file is located in `/opt/wormsign/templates/wormsign.toml__template` in the `usul.elv` script. The template is copied and edited for each signing target using `/opt/wormsign/templates/update_config.sh`.
 
 ```
 #!/usr/bin/env bash
