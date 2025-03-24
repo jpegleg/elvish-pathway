@@ -1,0 +1,8 @@
+[
+  {"target": "/etc/hosts"},
+  {"target": "/etc/ssh/sshd_config"},
+  {"target": "/bin/bash"},
+  {"target": "/bin/sh"},
+  {"target": "/usr/local/bin/elvish"},
+  {"target": "/etc/profile"}
+]
