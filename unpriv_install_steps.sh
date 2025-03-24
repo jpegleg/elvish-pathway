@@ -22,3 +22,11 @@ for x in $(grep ^- README.md | grep -v 84 | cut -d'-' -f2); do
     echo "Installing $x"
     sudo cp target/release/$x /usr/local/bin/ 
 done
+
+# git clone wormsign from github
+git clone https://github.com/jpegleg/wormsign || rm -rf wormsign && git clone https://github.com/jpegleg/wormsign
+cd wormsign || exit 1
+
+# install wormsign
+cargo build --release
+sudo cp target/release/wormsign /usr/local/bin/
