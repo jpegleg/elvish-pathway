@@ -16,3 +16,9 @@ apt install openssl cmake gcc clang -y
 
 # set elvish as the login shell for user specified, the user that be leveraging it
 usermod --shell /usr/local/bin/elvish $1
+
+# set wormsign directories and templates
+mkdir -p /opt/wormsign/live /opt/wormsign/templates
+cp scripts/update_config.sh /opt/wormsign/templates/
+cp wormsign.toml__template /opt/wormsign/templates/
+chown -R $1:$1 /opt/wormsign
