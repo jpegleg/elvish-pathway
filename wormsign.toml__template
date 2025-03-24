@@ -1,0 +1,4 @@
+key_path = "/opt/wormsign/live/TEMPLATE/TEMPLATE_dilithium.key"
+pub_path = "/opt/wormsign/live/TEMPLATE/TEMPLATE_dilithium.pub"
+sig_path = "/opt/wormsign/live/TEMPLATE/TEMPLATE_dilithium.sig"
+file_path = "TPATH"
