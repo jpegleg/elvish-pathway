@@ -62,3 +62,9 @@ cargo build --release
 sudo cp target/release/AES256CTR /usr/local/bin/
 
 cd ../../
+
+# set wormsign directories and templates
+sudo mkdir -p /opt/wormsign/live /opt/wormsign/templates
+sudo cp scripts/update_config.sh /opt/wormsign/templates/
+sudo cp wormsign.toml__template /opt/wormsign/templates/
+sudo chown -R $(whoami):$(whoami) /opt/wormsign
