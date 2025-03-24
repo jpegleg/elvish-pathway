@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 
 # set the config for wezterm
 cp wezterm.lua ~/.wezterm.lua
