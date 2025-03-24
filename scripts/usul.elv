@@ -16,7 +16,7 @@ peach {|h|
   mkdir -p /opt/wormsign/live/$y
   cd /opt/wormsign/live/$y/
   cp /opt/wormsign/templates/wormsign.toml__template /opt/wormsign/live/$y/wormsign.toml
-  /bin/bash /home/unseenwork/workspace/elvish-pathway/scripts/update_config.sh $y $h[target] /opt/wormsign/live/$y/wormsign.toml
+  /bin/bash /opt/wormsign/templates/update_config.sh $y $h[target] /opt/wormsign/live/$y/wormsign.toml
   var logstamp = (date +%Y-%m-%dT%H:%M:%SZ)
   echo $logstamp - $sessionid - $h[target] - signed
 } $wormtargets
