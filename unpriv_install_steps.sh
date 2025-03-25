@@ -31,8 +31,9 @@ git clone https://github.com/jpegleg/wormsign || rm -rf wormsign && git clone ht
 cd wormsign || exit 1
 
 # install wormsign
-cargo build --release
+cargo build --release --all
 sudo cp target/release/wormsign /usr/local/bin/
+sudo cp target/release/wormsign-confgen /usr/local/bin
 
 cd ..
 
