@@ -78,26 +78,30 @@ One of the great tools in the `scripts` collection is `lord_fim.elv` which is a 
 
 ### Usul and Wormsign
 
-The script `usul.elv` is for automated Dilithium5 signature creation using `wormsign`. We need to do some setup for `usul.elv`, including a template file for `wormsign`.
+The script `usul.elv` is for automated Dilithium5 signature creation using `wormsign -ats` to create bulk Dilithium5 signatures for each file specified in `worm.json`, throwing away the private keys and saving the public key for verification.
+
+The script calls a bash script in `/opt/wormsign/template/update_config.sh` which is used to leverage `&&` control flow while generating the files.
+It calls `wormsign-confgen` to create a `wormsign.toml` for each file, signs, and verifies. There is a directory created for each target within `/opt/wormsign/live` that uses sha256sum to create the directory name, which is also used for some file names.
 
 ```
-key_path = "/opt/wormsign/live/TEMPLATE/TEMPLATE_dilithium.key"
-pub_path = "/opt/wormsign/live/TEMPLATE/TEMPLATE_dilithium.pub"
-sig_path = "/opt/wormsign/live/TEMPLATE/TEMPLATE_dilithium.sig"
-file_path = "TPATH"
+#!/usr/bin/env elvish
+
+var sessionid = (uidgen)
+var worm = (which wormsign)
+
+echo (date +%Y-%m-%dT%H:%M:%SZ) - $sessionid - We found $worm and will use it.
+echo (date +%Y-%m-%dT%H:%M:%SZ) - $sessionid - SHA256 checksum of wormsign: (sha256sum $worm)
+echo (date +%Y-%m-%dT%H:%M:%SZ) - $sessionid - reading targets from ./worm.json
+
+var wormtargets = (from-json < worm.json)
+
+echo (date +%Y-%m-%dT%H:%M:%SZ) - $sessionid - checking on $@wormtargets
+
+peach {|h|
+  var y = (echo $h[target] | sha256sum | cut -c1-32)
+  mkdir -p /opt/wormsign/live/$y
+  /bin/bash /opt/wormsign/templates/update_config.sh $h[target] /opt/wormsign/live/$y/$y.pub /opt/wormsign/live/$y/$y.sig /opt/wormsign/live/$y/$y.key /opt/wormsign/live/$y
+  var logstamp = (date +%Y-%m-%dT%H:%M:%SZ)
+  echo $logstamp - $sessionid - $h[target] - signed
+} $wormtargets
 ```
-
-This file is located in `/opt/wormsign/templates/wormsign.toml__template` in the `usul.elv` script. The template is copied and edited for each signing target using `/opt/wormsign/templates/update_config.sh`.
-
-WARNING: This mode of `wormsign` is the ephemeral signing mode with `-ats` which does not preserve the private key, only the public key.
-
-```
-#!/usr/bin/env bash
-sed -i "s|TEMPLATE|$1|g" "$3"
-sed -i "s|TPATH|$2|g" "$3"
-/usr/local/bin/wormsign -ats > sign.json 2>/dev/null
-/usr/local/bin/wormsign -v > verify.json 2>/dev/null
-```
-
-The signatures are verified after creation, but can be manually or automatically verified by further use of the `wormsign` program and the public key.
-
