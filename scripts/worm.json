@@ -1,6 +1,5 @@
 [
   {"target": "/etc/hosts"},
-  {"target": "/etc/ssh/sshd_config"},
   {"target": "/bin/bash"},
   {"target": "/bin/sh"},
   {"target": "/vmlinuz"},
@@ -10,7 +9,6 @@
   {"target": "/usr/bin/rm"},
   {"target": "/usr/bin/ps"},
   {"target": "/usr/bin/tar"},
-  {"target": "/usr/bin/zip"},
   {"target": "/usr/bin/less"},
   {"target": "/usr/bin/ln"},
   {"target": "/usr/bin/cc"},
