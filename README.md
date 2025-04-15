@@ -44,3 +44,6 @@ fn c {|@c| e:chk $@c }
 The installation includes [wormsign](https://github.com/jpegleg/wormsign) and [AES256CTR](https://github.com/jpegleg/file_encryption_AES256/) tools.
 
 Wormsign is for Dilithium file signing and verification and the AES256CTR tool is for file encryption. Both tools have interactive and automation modes.
+
+
+Also see https://github.com/jpegleg/power-pathway which has much of the same functionality but using PowerShell instead of elvish.
