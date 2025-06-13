@@ -1,10 +1,6 @@
 #!/usr/bin/env sh
 
-# from https://elv.sh/get/
-curl -o elvish-v0.20.1.tar.gz https://dl.elv.sh/linux-amd64/elvish-v0.20.1.tar.gz
-tar -xzvf elvish-v0.20.1.tar.gz
-cp elvish-v0.20.1 /usr/local/bin/elvish
-rm elvish-v0.20.1.tar.gz elvish-v0.20.1
+curl -so - https://dl.elv.sh/linux-amd64/elvish-v0.21.0.tar.gz | sudo tar -xzvC /usr/local/bin
 
 # from https://wezfurlong.org/wezterm/install/linux.html
 curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
