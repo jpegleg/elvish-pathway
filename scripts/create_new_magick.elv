@@ -6,7 +6,7 @@ peach {|h|
         tar czvf ~/.runes__$h[name]_(date +%Y%m%d%H%M%S).tgz ~/.$h[name]
         mv ~/.$h[name] ~/.$h[name]_last_(date +%Y%m%d%H%M%S)
     }
-    makesigil ~/.$h[name] > ~/.$h[name].key
+    makesigil ~/.$h[name]
     chown (whoami):(whoami) ~/.$h[name]
     chmod 600 ~/.$h[name]
 } $runes
