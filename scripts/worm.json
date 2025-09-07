@@ -2,7 +2,6 @@
   {"target": "/etc/hosts"},
   {"target": "/bin/bash"},
   {"target": "/bin/sh"},
-  {"target": "/vmlinuz"},
   {"target": "/usr/local/bin/elvish"},
   {"target": "/usr/bin/ls"},
   {"target": "/usr/bin/df"},
@@ -45,8 +44,6 @@
   {"target": "/usr/local/bin/mattockoff"},
   {"target": "/usr/local/bin/halberdon"},
   {"target": "/usr/local/bin/halberdoff"},
-  {"target": "/usr/local/bin/amuleton"},
-  {"target": "/usr/local/bin/amuletoff"},
   {"target": "/usr/local/bin/magick"},
   {"target": "/usr/local/bin/antimagick"},
   {"target": "/usr/local/bin/crown"},
@@ -92,6 +89,5 @@
   {"target": "/usr/local/bin/pack"},
   {"target": "/usr/local/bin/hex"},
   {"target": "/usr/local/bin/shield"},
-  {"target": "/usr/local/bin/armor"},
-  {"target": "/etc/profile"}
+  {"target": "/usr/local/bin/armor"}
 ]
