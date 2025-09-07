@@ -1,6 +1,6 @@
 # The pathway elvish script example collection
 
-These scripts use the [dwarven-toolbox](https://github.com/jpegleg/dwarven-toolbox/) tools along with the parallel execution lambdas in elvish to make modular, tweakable, cryptography scripts.
+These scripts use the [dwarven-toolbox](https://github.com/jpegleg/dwarven-toolbox/) tools along with the parallel execution lambdas.
 
 The dwarven-toolkit tools do some of the low level byte operations, while the elvish and CLI does the parallel processing and composability.
 
@@ -44,14 +44,6 @@ Each name is processed as a thread, each thread running at the same time for eac
 The next script `society_of_growth.elv` creates additional formats and reports of each `~/.$h[name]`.
 
 Some of the other scripts in the collection utilize these `~/.$h[name]` generated files for various demonstrations.
-
-We'll see that the `deep_woods_locker.elv` JSON is a different file, the `files.json`. This is a different JSON structure for targets to encrypt with XChaCha20Poly1305 AEAD file encryption.
-
-The `deep_woods_locker.elv` uses a provided ed25519 signing key, and so we can use the ones generated from `create_new_mgick.elv` for this purpose. In the example below, we had the tigerax user's .starlight key sign both data segments. Note how the files.json isn't paths to files, but rather data in JSON. This means that the input JSON "data" segment is the plaintext for each "name".
-
-The `deep_woods_locker.elv` is a somewhat obscene semi-obfuscated data encryption system that does not expose the decryption functionality directly, outputting a ciphertext file and supporting files, including signing with the ed25519 key set for each name.
-
-A much better approach to encryption and signing is the use of `immortal.elv` for encryption, `mortal.elv` for decryption, and `usul.elv` for signing.
 
 #### Example demonstration
 
